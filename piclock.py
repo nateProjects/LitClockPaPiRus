@@ -89,12 +89,12 @@ while running:
 
     # Write text to the screen at selected point, with an Id
     # Nothing will show on the screen
-    text.AddText(f"{quote[2]}\n", 1, 1, 8, Id="Start" )
+    text.AddText(f"{quote[2]}\n", 1, 1, 16, Id="Start" )
     # was # print(f"{quote[2]}\n")
 
     # Add another line of text, at the default location
     # Nothing will show on the screen
-    text.AddText(f"{quote[4]}, {quote[3]}", 88, 10, 8, Id="Quote")
+    text.AddText(f"{quote[4]}, {quote[3]}", 88, 10, 16, Id="Quote")
     # was print(f"{quote[4]}, {quote[3]}")
 
     # Now display BOTH lines on the screen
