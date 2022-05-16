@@ -104,8 +104,8 @@ while running:
 
     # if event is of type quit then set
     # running bool to false
-    if this or that
-        running = False
+    # if this or that
+    #    running = False
 
 os.system("clear")
 
@@ -123,38 +123,3 @@ os.system("clear")
 # maybe add photo
 
 # Variable to keep the main loop running
-
-Example of loop
-
-28running = True
-29
-30# Main loop
-31while running:
-32    # Look at every event in the queue
-33    for event in pygame.event.get():
-34        # Did the user hit a key?
-35        if event.type == KEYDOWN:
-36            # Was it the Escape key? If so, stop the loop.
-37            if event.key == K_ESCAPE:
-38                running = False
-39
-40        # Did the user click the window close button? If so, stop the loop.
-41        elif event.type == QUIT:
-42            running = False
-
-# creating a bool value which checks
-# if game is running
-running = True
- 
-# Game loop
-# keep game running till running is true
-while running:
-   
-    # Check for event if user has pushed
-    # any event in queue
-    for event in pygame.event.get():
-       
-        # if event is of type quit then set
-        # running bool to false
-        if event.type == pygame.QUIT:
-            running = False
