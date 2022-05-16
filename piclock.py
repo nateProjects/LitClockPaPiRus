@@ -76,6 +76,8 @@ time_list = buildTimeList()
 print("Done")
 # text.AddText("Done")
 
+text.Clear()
+
 text.AddText("Love you so much!\n", 1, 1, 12, Id="Quote" )
 text.AddText("Yours always", 10, 88, 10, Id="Ref")
 
@@ -86,6 +88,8 @@ running = True
 while running:
 
     text.Clear()
+
+    clock.sleep(30)
 
     # print("Getting current time...", end=" ")
     time = dt.time(dt.now())
@@ -104,8 +108,6 @@ while running:
 
     # Now display BOTH lines on the screen
     text.WriteAll()
-
-    clock.sleep(30)
 
     # if event is of type quit then set
     # running bool to false
