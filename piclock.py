@@ -76,18 +76,15 @@ time_list = buildTimeList()
 print("Done")
 # text.AddText("Done")
 
-text.Clear()
-
-text.AddText("Love you so much!", 1, 1, 16, Id="Quote" )
-text.AddText("Yours always", 10, 88, 14, Id="Ref")
+text.AddText("Love You So Much", 1, 1, 12, Id="Quote" )
+text.AddText("Yours Always, Nathan", 10, 88, 10, Id="Ref")
+text.WriteAll()
 
 # creating a bool value which checks if clock is running
 running = True
 
 # keep clock running till running is true
 while running:
-
-    clock.sleep(30)
 
     text.Clear()
 
@@ -98,12 +95,12 @@ while running:
 
     # Write text to the screen at selected point, with an Id
     # Nothing will show on the screen
-    text.AddText(f"{quote[2]}\n", 1, 1, 12, Id="Quote" )
+    text.UpdateText(f"{quote[2]}\n", 1, 1, 12, Id="Quote" )
     print(f"{quote[2]}\n")
 
     # Add another line of text, at the default location
     # Nothing will show on the screen
-    text.AddText(f"{quote[4]}, {quote[3]}", 10, 88, 10, Id="Ref")
+    text.UpdateText(f"{quote[4]}, {quote[3]}", 10, 88, 10, Id="Ref")
     print(f"{quote[4]}, {quote[3]}")
 
     # Now display BOTH lines on the screen
@@ -115,6 +112,9 @@ while running:
     #    running = False
 
     os.system("clear")
+
+    clock.sleep(60)
+
     
 
 # X set up loop
