@@ -5,6 +5,7 @@ import time as clock
 
 from datetime import datetime as dt
 from dateutil import parser as dp
+from papirus import PapirusTextPos
 
 os.system('clear')
 
@@ -65,10 +66,15 @@ def getTimeQuote(timelist, cur_time):
         time = timelist[time_h][time_m]
         return random.choice(timelist[time[0]][time[1]])
 
+# Calling PapirusTextPos this way will mean nothing is written to the screen by default
+text = PapirusTextPos(False [,rotation = rot])
+
 # Application Enter
 print("Building times list...", end=" ")
+# text.AddText("Building times list...", end=" ")
 time_list = buildTimeList()
 print("Done")
+# text.AddText("Done")
 
 # creating a bool value which checks if clock is running
 running = True
@@ -76,14 +82,79 @@ running = True
 # keep clock running till running is true
 while running:
 
-    print("Getting current time...", end=" ")
+    # print("Getting current time...", end=" ")
     time = dt.time(dt.now())
     quote = getTimeQuote(time_list, time)
-    print("Done\n")
+    # print("Done\n")
 
-    print(f"{quote[2]}\n")
-    print(f"{quote[4]}, {quote[3]}")
+    # Write text to the screen at selected point, with an Id
+    # Nothing will show on the screen
+    text.AddText(f"{quote[2]}\n", 1, 1, 8, Id="Start" )
+    # was # print(f"{quote[2]}\n")
+
+    # Add another line of text, at the default location
+    # Nothing will show on the screen
+    text.AddText(f"{quote[4]}, {quote[3]}", 88, 10, 8, Id="Quote")
+    # was print(f"{quote[4]}, {quote[3]}")
+
+    # Now display BOTH lines on the screen
+    text.WriteAll()
 
     clock.sleep(60)
 
+    # if event is of type quit then set
+    # running bool to false
+    if this or that
+        running = False
+
 os.system("clear")
+
+
+# X set up loop
+
+# X wait 60 seconds then run again
+
+# Have starter I Love You Message or picture up for x seconds - JenLitClock
+
+# later - poll for button press
+
+# add shutdown
+
+# maybe add photo
+
+# Variable to keep the main loop running
+
+Example of loop
+
+28running = True
+29
+30# Main loop
+31while running:
+32    # Look at every event in the queue
+33    for event in pygame.event.get():
+34        # Did the user hit a key?
+35        if event.type == KEYDOWN:
+36            # Was it the Escape key? If so, stop the loop.
+37            if event.key == K_ESCAPE:
+38                running = False
+39
+40        # Did the user click the window close button? If so, stop the loop.
+41        elif event.type == QUIT:
+42            running = False
+
+# creating a bool value which checks
+# if game is running
+running = True
+ 
+# Game loop
+# keep game running till running is true
+while running:
+   
+    # Check for event if user has pushed
+    # any event in queue
+    for event in pygame.event.get():
+       
+        # if event is of type quit then set
+        # running bool to false
+        if event.type == pygame.QUIT:
+            running = False
