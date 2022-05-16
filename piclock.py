@@ -108,7 +108,7 @@ while running:
     #    running = False
 
     os.system("clear")
-
+    screen.partial_update()
 
 # X set up loop
 
