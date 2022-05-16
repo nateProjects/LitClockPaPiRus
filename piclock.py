@@ -82,6 +82,8 @@ running = True
 # keep clock running till running is true
 while running:
 
+    text.Clear()
+
     # print("Getting current time...", end=" ")
     time = dt.time(dt.now())
     quote = getTimeQuote(time_list, time)
@@ -108,7 +110,7 @@ while running:
     #    running = False
 
     os.system("clear")
-    screen.partial_update()
+    
 
 # X set up loop
 
