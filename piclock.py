@@ -67,7 +67,7 @@ def getTimeQuote(timelist, cur_time):
         return random.choice(timelist[time[0]][time[1]])
 
 # Calling PapirusTextPos this way will mean nothing is written to the screen by default
-text = PapirusTextPos(False [,rotation = rot])
+text = PapirusTextPos(False)
 
 # Application Enter
 print("Building times list...", end=" ")
