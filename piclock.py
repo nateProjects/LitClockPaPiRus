@@ -76,6 +76,9 @@ time_list = buildTimeList()
 print("Done")
 # text.AddText("Done")
 
+text.AddText("Love you so much!\n", 1, 1, 12, Id="Quote" )
+text.AddText("Yours always", 10, 88, 10, Id="Ref")
+
 # creating a bool value which checks if clock is running
 running = True
 
@@ -91,12 +94,12 @@ while running:
 
     # Write text to the screen at selected point, with an Id
     # Nothing will show on the screen
-    text.AddText(f"{quote[2]}\n", 1, 1, 12, Id="Start" )
+    text.AddText(f"{quote[2]}\n", 1, 1, 12, Id="Quote" )
     print(f"{quote[2]}\n")
 
     # Add another line of text, at the default location
     # Nothing will show on the screen
-    text.AddText(f"{quote[4]}, {quote[3]}", 10, 88, 10, Id="Quote")
+    text.AddText(f"{quote[4]}, {quote[3]}", 10, 88, 10, Id="Ref")
     print(f"{quote[4]}, {quote[3]}")
 
     # Now display BOTH lines on the screen
