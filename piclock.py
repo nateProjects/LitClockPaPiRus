@@ -78,8 +78,8 @@ print("Done")
 
 text.Clear()
 
-text.AddText("Love you so much!\n", 1, 1, 12, Id="Quote" )
-text.AddText("Yours always", 10, 88, 10, Id="Ref")
+text.AddText("Love you so much!", 1, 1, 16, Id="Quote" )
+text.AddText("Yours always", 10, 88, 14, Id="Ref")
 
 # creating a bool value which checks if clock is running
 running = True
@@ -87,9 +87,9 @@ running = True
 # keep clock running till running is true
 while running:
 
-    text.Clear()
-
     clock.sleep(30)
+
+    text.Clear()
 
     # print("Getting current time...", end=" ")
     time = dt.time(dt.now())
