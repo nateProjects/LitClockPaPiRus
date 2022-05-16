@@ -90,24 +90,24 @@ while running:
     # Write text to the screen at selected point, with an Id
     # Nothing will show on the screen
     text.AddText(f"{quote[2]}\n", 1, 1, 12, Id="Start" )
-    # was # print(f"{quote[2]}\n")
+    print(f"{quote[2]}\n")
 
     # Add another line of text, at the default location
     # Nothing will show on the screen
     text.AddText(f"{quote[4]}, {quote[3]}", 10, 88, 10, Id="Quote")
-    # was print(f"{quote[4]}, {quote[3]}")
+    print(f"{quote[4]}, {quote[3]}")
 
     # Now display BOTH lines on the screen
     text.WriteAll()
 
-    clock.sleep(60)
+    clock.sleep(30)
 
     # if event is of type quit then set
     # running bool to false
     # if this or that
     #    running = False
 
-os.system("clear")
+    os.system("clear")
 
 
 # X set up loop
