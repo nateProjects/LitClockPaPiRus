@@ -78,7 +78,7 @@ print("Done")
 
 text.AddText("Love You So Much", 1, 1, 12, Id="Quote" )
 text.AddText("Yours Always, Nathan", 10, 88, 10, Id="Ref")
-text.WriteAll()
+#text.WriteAll()
 
 # creating a bool value which checks if clock is running
 running = True
@@ -87,7 +87,8 @@ running = True
 while running:
 
     # text.Clear()
-
+    # Now display BOTH lines on the screen
+    text.WriteAll()
     # print("Getting current time...", end=" ")
     time = dt.time(dt.now())
     quote = getTimeQuote(time_list, time)
@@ -103,8 +104,7 @@ while running:
     text.UpdateText(f"{quote[4]}, {quote[3]}", 10, 88, 10, Id="Ref")
     print(f"{quote[4]}, {quote[3]}")
 
-    # Now display BOTH lines on the screen
-    text.WriteAll()
+
 
     # if event is of type quit then set
     # running bool to false
