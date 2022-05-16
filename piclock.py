@@ -86,7 +86,7 @@ running = True
 # keep clock running till running is true
 while running:
 
-    text.Clear()
+    # text.Clear()
 
     # print("Getting current time...", end=" ")
     time = dt.time(dt.now())
