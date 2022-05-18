@@ -112,19 +112,3 @@ while running:
     clock.sleep(60.0 - ((clock.time() - starttime) % 60.0))
 
     os.system("clear")
-
-    
-
-# X set up loop
-
-# X wait 60 seconds then run again
-
-# Have starter I Love You Message or picture up for x seconds - JenLitClock
-
-# later - poll for button press
-
-# add shutdown
-
-# maybe add photo
-
-# Variable to keep the main loop running
