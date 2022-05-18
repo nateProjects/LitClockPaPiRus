@@ -7,6 +7,8 @@ from datetime import datetime as dt
 from dateutil import parser as dp
 from papirus import PapirusTextPos
 
+starttime = clock.time()
+
 os.system('clear')
 
 def buildTimeList():
@@ -107,9 +109,9 @@ while running:
     # if this or that
     #    running = False
 
-    os.system("clear")
+    clock.sleep(60.0 - ((clock.time() - starttime) % 60.0))
 
-    clock.sleep(15)
+    os.system("clear")
 
     
 

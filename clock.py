@@ -8,6 +8,8 @@ from dateutil import parser as dp
 
 os.system('clear')
 
+starttime = clock.time()
+
 def buildTimeList():
     time_list = []
 
@@ -84,6 +86,6 @@ while running:
     print(f"{quote[2]}\n")
     print(f"{quote[4]}, {quote[3]}")
 
-    clock.sleep(60)
+    clock.sleep(60.0 - ((clock.time() - starttime) % 60.0))
 
 os.system("clear")
