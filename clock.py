@@ -15,7 +15,7 @@ def buildTimeList():
 
     # Read the CSV file
     try:
-        with open('times.csv', 'r') as f:
+        with open('/home/nat/Code/LitClockPaPiRus/times.csv', 'r') as f:
             reader = csv.reader(f, delimiter='|')
             time_list = list(reader)
     except IOError:
